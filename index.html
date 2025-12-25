@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bismil Ki Nihari | Jama Masjid Ki Mashhoor Nihari</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --dark:#2b1a12;
+  --brown:#4a2e1f;
+  --gold:#c8a45d;
+  --cream:#fbf6ec;
+  --red:#9e1b1b;
+  --whatsapp:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+html{scroll-behavior:smooth}
+body{color:#333;line-height:1.8}
+
+/* TOP BAR */
+.topbar{
+  background:#111;color:#fff;
+  padding:10px 8%;
+  display:flex;justify-content:space-between;flex-wrap:wrap
+}
+.apply-link{color:#ffcc88;font-weight:600}
+
+/* NAV */
+nav{
+  background:#fff;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 8%;
+  box-shadow:0 5px 20px rgba(0,0,0,.1)
+}
+nav img{height:60px}
+nav ul{list-style:none;display:flex;gap:25px}
+nav ul li{font-weight:600}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("images/image\(delhi\).jpg") center/cover;
+  color:#fff;padding:140px 8%
+}
+.hero h1{font-size:52px}
+.hero p{max-width:780px}
+
+/* SECTIONS */
+section{padding:90px 8%}
+.section-title{font-size:36px;color:var(--red);margin-bottom:20px}
+
+/* SPLIT */
+.split{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:50px;align-items:center
+}
+
+/* STORY */
+.story-highlight{color:var(--gold);font-weight:700;letter-spacing:.5px}
+.story-img{width:100%;border-radius:22px;object-fit:cover}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px
+}
+.card{
+  background:var(--cream);
+  padding:30px;border-radius:18px
+}
+
+/* MENU */
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px
+}
+.menu-item{
+  background:#fff;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1)
+}
+.menu-item h4{margin-bottom:6px}
+.menu-desc{
+  font-size:14px;
+  color:#555;
+  margin-bottom:8px
+}
+.menu-price{color:var(--red);font-weight:700}
+
+/* INVEST */
+.invest{
+  background:linear-gradient(135deg,#3a1f14,#5a3724);
+  color:#fff;border-radius:25px;padding:45px
+}
+.invest h3{color:#ffcc88}
+
+/* CONTACT */
+.contact-box{
+  background:var(--cream);
+  padding:45px;
+  border-radius:20px;
+  max-width:650px
+}
+.contact-box p{margin-bottom:15px}
+.contact-box a{
+  display:inline-block;
+  background:var(--whatsapp);
+  color:#fff;
+  padding:14px 30px;
+  border-radius:40px;
+  font-weight:600
+}
+
+/* FOOTER */
+footer{
+  background:#111;color:#aaa;
+  text-align:center;padding:30px
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;bottom:25px;right:25px;
+  background:var(--whatsapp);
+  width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:28px
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
+}
+
+.menu-item{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  transition:transform .3s ease, box-shadow .3s ease
+}
+
+.menu-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,.18)
+}
+
+.menu-item img{
+  width:100%;
+  height:220px;
+  object-fit:cover
+}
+
+.menu-content{
+  padding:22px
+}
+
+.menu-content h4{
+  margin-bottom:6px;
+  font-size:18px
+}
+
+.menu-desc{
+  font-size:14px;
+  color:#555;
+  margin-bottom:10px
+}
+
+.menu-price{
+  font-weight:700;
+  color:var(--red);
+  font-size:16px
+}
+
+
+@media(max-width:900px){
+  .split{grid-template-columns:1fr}
+  nav ul{display:none}
+  section{padding:70px 6%}
+  .hero h1{font-size:36px}
+}
+
+/* INVEST SECTION FIX */
+.invest{
+  background:linear-gradient(135deg,#3a1f14,#5a3724);
+  color:#fff;
+  border-radius:25px;
+  padding:60px;
+}
+
+/* MAKE CARDS VISIBLE INSIDE INVEST */
+.invest .cards{
+  margin-top:30px;
+}
+
+.invest .card{
+  background:#ffffff;          /* white card for contrast */
+  color:#2b1a12;               /* dark readable text */
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+/* CARD TITLES */
+.invest .card strong{
+  color:#9e1b1b;
+  font-size:16px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* APPLY FORM CUSTOM STYLING */
+.franchise-form{
+  display:grid;
+  gap:18px;
+}
+
+.franchise-form input,
+.franchise-form select,
+.franchise-form textarea{
+  background:#fff;
+  border:1px solid #ccc;
+  border-radius:12px;
+  padding:15px 16px;
+  font-size:15px;
+}
+
+.franchise-form input:focus,
+.franchise-form select:focus,
+.franchise-form textarea:focus{
+  outline:none;
+  border-color:#c8a45d;
+  box-shadow:0 0 0 2px rgba(200,164,93,.25);
+}
+
+.apply-btn{
+  background:#9e1b1b;
+  color:#fff;
+  padding:16px;
+  border:none;
+  border-radius:45px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.apply-btn:hover{
+  background:#7f1414;
+  transform:translateY(-2px);
+}
+
+/* MOBILE OPTIMIZATION */
+@media(max-width:600px){
+  #apply{
+    padding-top:60px;
+  }
+
+  .contact-box{
+    padding:30px 22px;
+  }
+}
+
+
+
+/* MOBILE SPACING */
+@media(max-width:900px){
+  .invest{
+    padding:40px 25px;
+  }
+}
+
+</style>
+</head>
+
+
+
+<script>
+function submitFranchiseForm(e){
+  e.preventDefault();
+
+  const name = document.getElementById("fname").value;
+  const phone = document.getElementById("fphone").value;
+  const email = document.getElementById("femail").value;
+  const city = document.getElementById("fcity").value;
+  const invest = document.getElementById("finvestment").value;
+  const msg = document.getElementById("fmessage").value;
+
+  const text =
+`Franchise Application – Bismil Ki Nihari
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+City: ${city}
+Investment: ${invest}
+Message: ${msg}`;
+
+  window.open(
+    "https://wa.me/918871861443?text=" + encodeURIComponent(text),
+    "_blank"
+  );
+}
+</script>
+
+<body>
+
+<div class="topbar">
+  <div>📞 Call / WhatsApp: +91 88718 61443</div>
+  <a href="#apply" class="apply-link">Apply for Franchise</a>
+</div>
+
+<nav>
+  <img src="images/logo.jpg">
+  <ul>
+    <li>Home</li><li>About</li><li>Franchise</li><li>Menu</li><li>Contact</li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Jama Masjid Ki Mashoor Nihari(Bismil Ki Nihari)</h1>
+  <p>
+    Bismil Ki Nihari brings the legendary taste of Old Delhi’s Jama Masjid to
+    modern India through a focused, scalable, and authentic Nihari-based
+    food franchise model.
+  </p>
+</section>
+
+<section class="split">
+  <div>
+    <span class="story-highlight">Every bowl tells a story</span>
+    <h2 class="section-title">Our Story</h2>
+    <p>
+      Bismil Ki Nihari is rooted in the historic food culture of Old Delhi’s
+      Jama Masjid, where Nihari has been slow-cooked and perfected over generations.
+      Our brand preserves this heritage through carefully curated recipes,
+      traditional cooking methods, and uncompromising quality standards.
+    </p>
+    <p>
+      Guided by culinary experts with over <strong>60 years of hands-on experience</strong>,
+      we ensure that every serving delivers consistency, authenticity, and depth of flavor.
+      Today, Bismil Ki Nihari stands as a bridge between timeless tradition
+      and modern food entrepreneurship.
+    </p>
+  </div>
+  <img src="images/image.png" class="story-img">
+</section>
+
+<section id="menu">
+  <h2 class="section-title">Our Menu</h2>
+  <p style="max-width:850px;margin-bottom:40px">
+    Our menu is thoughtfully curated to maintain consistency, operational
+    efficiency, and exceptional taste. Every dish is prepared using
+    traditional slow-cooking techniques and premium-quality ingredients,
+    ensuring an authentic Nihari experience in every serving.
+  </p>
+
+  <div class="menu-grid">
+
+    <!-- NIHARI HALF -->
+    <div class="menu-item">
+      <img 
+        src="images/image1(nihari).jpg"
+        alt="Nihari Half">
+      <div class="menu-content">
+        <h4>Nihari (Half)</h4>
+        <p class="menu-desc">
+          Traditional slow-cooked Nihari prepared overnight with rich spices
+          and deep flavors, served in a balanced half portion.
+        </p>
+        <div class="menu-price">₹130</div>
+      </div>
+    </div>
+
+    <!-- NIHARI FULL -->
+    <div class="menu-item">
+      <img 
+        src="images/image1(nihari).jpg"
+        alt="Nihari Full">
+      <div class="menu-content">
+        <h4>Nihari (Full)</h4>
+        <p class="menu-desc">
+          A generous serving of our signature Nihari, slow-cooked to perfection
+          for those who appreciate the depth of authentic flavors.
+        </p>
+        <div class="menu-price">₹260</div>
+      </div>
+    </div>
+
+    <!-- GUDE WALI HALF -->
+    <div class="menu-item">
+      <img 
+        src="images/image3.JPG"
+        alt="Nihari Gude Wali Half">
+      <div class="menu-content">
+        <h4>Nihari Gude Wali (Half)</h4>
+        <p class="menu-desc">
+          Enhanced with bone marrow (gudda) for a richer, deeper taste that
+          defines the true essence of Jama Masjid Nihari.
+        </p>
+        <div class="menu-price">₹160</div>
+      </div>
+    </div>
+
+    <!-- GUDE WALI FULL -->
+    <div class="menu-item">
+      <img 
+        src="images/image1(nihari).jpg"
+        alt="Nihari Gude Wali Full">
+      <div class="menu-content">
+        <h4>Nihari Gude Wali (Full)</h4>
+        <p class="menu-desc">
+          Our premium offering combining slow-cooked meat and bone marrow,
+          delivering unmatched richness and authenticity.
+        </p>
+        <div class="menu-price">₹300</div>
+      </div>
+    </div>
+
+    <!-- KHEER -->
+    <div class="menu-item">
+      <img 
+        src="images/image5(Arabian Slice).JPG"
+        alt="Kheer Dessert">
+      <div class="menu-content">
+        <h4>Kheer</h4>
+        <p class="menu-desc">
+          A traditional Indian dessert made with slow-simmered milk,
+          rice, and dry fruits — the perfect finish to a Nihari meal.
+        </p>
+        <div class="menu-price">₹50</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="invest">
+  <h2>₹3 Lakh Franchise Investment</h2>
+  <h3>Low Investment • High Return Business Model</h3>
+
+  <p style="max-width:900px;margin:20px 0">
+    Bismil Ki Nihari offers a thoughtfully designed franchise model for
+    aspiring entrepreneurs who want to enter the food business with
+    minimal risk and strong growth potential. With a focused Nihari-only
+    menu and streamlined operations, our partners benefit from
+    faster break-even and long-term profitability.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <strong>Franchise Model</strong><br>
+      FOFO (Franchise Owned, Franchise Operated), giving you complete
+      ownership and operational control of your outlet.
+    </div>
+
+    <div class="card">
+      <strong>Franchise Fee</strong><br>
+      ₹3,00,000 one-time brand licensing fee, covering training,
+      recipes, operational support, and brand usage rights.
+    </div>
+
+    <div class="card">
+      <strong>Total Setup Investment</strong><br>
+      Approximately ₹3–5 lakh, depending on outlet size, location,
+      and interior requirements.
+    </div>
+
+    <div class="card">
+      <strong>Return on Investment (ROI)</strong><br>
+      Most partners achieve break-even within 8–12 months,
+      based on location, sales volume, and operational efficiency.
+    </div>
+  </div>
+</section>
+
+<!-- FRANCHISE LOCATIONS -->
+<section id="locations">
+  <h2 class="section-title">Franchise Locations</h2>
+
+  <p style="max-width:750px;margin-bottom:35px">
+    Our journey is expanding across key cities with strong demand for
+    authentic Jama Masjid–style Nihari.
+  </p>
+
+  <div class="cards">
+    <div class="card"><strong>Indore</strong></div>
+    <div class="card"><strong>Mhow</strong></div>
+    <div class="card"><strong>Dewas</strong></div>
+    <div class="card">
+      <strong>Kolkata</strong><br>
+      <span style="color:#9e1b1b;font-weight:600">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLY SECTION -->
+<section id="apply">
+  <h2 class="section-title">Apply for Franchise</h2>
+  <p style="max-width:750px;margin-bottom:35px">
+    Take the first step towards owning a <strong>Bismil Ki Nihari</strong> outlet.
+    Fill in your details and our franchise team will connect with you.
+  </p>
+
+  <div class="contact-box">
+    <form onsubmit="submitFranchiseForm(event)" class="franchise-form">
+
+      <input id="fname" type="text" placeholder="Full Name *" required>
+
+      <input id="fphone" type="tel" placeholder="Mobile Number *" required>
+
+      <input id="femail" type="email" placeholder="Email Address *" required>
+
+      <input id="fcity" type="text" placeholder="City / Preferred Location *" required>
+
+      <select id="finvestment" required>
+        <option value="" disabled selected>Investment Range *</option>
+        <option>₹3 – 5 Lakh</option>
+        <option>₹5 – 7 Lakh</option>
+        <option>₹7 Lakh+</option>
+      </select>
+
+      <textarea
+        id="fmessage"
+        rows="4"
+        placeholder="Tell us briefly why you want to partner with us (optional)"
+      ></textarea>
+
+      <button type="submit" class="apply-btn">
+        Submit Franchise Application
+      </button>
+
+    </form>
+  </div>
+</section>
+
+
+
+
+
+    <!-- FRANCHISE BROCHURE DOWNLOAD -->
+<section id="franchise-brochure">
+  <div style="text-align:center;padding-top:10px">
+
+    <a href="Bismil Ki Nihari Franchise Brochure (4).pdf"
+       download
+       style="
+         display:inline-block;
+         background:#c8a45d;
+         color:#2b1a12;
+         padding:16px 36px;
+         border-radius:40px;
+         font-weight:600;
+         font-size:16px;
+       ">
+      📄 Download Franchise Brochure
+    </a>
+
+  </div>
+</section>
+
+
+
+<footer>
+  © 2025 Bismil Ki Nihari • Authentic Nihari Franchise
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918871861443">💬</a>
+
+</body>
+</html>
+
+
